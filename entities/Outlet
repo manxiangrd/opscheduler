@@ -1,0 +1,32 @@
+{
+  "name": "Outlet",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Outlet Name"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location/Address"
+    },
+    "staffing_threshold": {
+      "type": "number",
+      "title": "Min Staffing Threshold",
+      "default": 2
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    },
+    "is_active": {
+      "type": "boolean",
+      "title": "Active",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "location"
+  ]
+}

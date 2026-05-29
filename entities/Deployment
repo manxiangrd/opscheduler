@@ -1,0 +1,47 @@
+{
+  "name": "Deployment",
+  "type": "object",
+  "properties": {
+    "employee_id": {
+      "type": "string",
+      "title": "Employee ID"
+    },
+    "employee_name": {
+      "type": "string",
+      "title": "Employee Name"
+    },
+    "outlet_id": {
+      "type": "string",
+      "title": "Outlet ID"
+    },
+    "outlet_name": {
+      "type": "string",
+      "title": "Outlet Name"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "title": "Deployment Date"
+    },
+    "shift": {
+      "type": "string",
+      "enum": [
+        "Morning",
+        "Afternoon",
+        "Night",
+        "Full Day"
+      ],
+      "title": "Shift",
+      "default": "Full Day"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "employee_id",
+    "outlet_id",
+    "date"
+  ]
+}

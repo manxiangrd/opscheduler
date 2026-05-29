@@ -1,0 +1,69 @@
+{
+  "name": "Leave",
+  "type": "object",
+  "properties": {
+    "employee_id": {
+      "type": "string",
+      "title": "Employee ID"
+    },
+    "employee_name": {
+      "type": "string",
+      "title": "Employee Name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Annual Leave",
+        "Medical Leave",
+        "Off Day"
+      ],
+      "title": "Leave Type"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Start Date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "title": "End Date"
+    },
+    "days": {
+      "type": "number",
+      "title": "Total Days"
+    },
+    "reason": {
+      "type": "string",
+      "title": "Reason"
+    },
+    "doc_url": {
+      "type": "string",
+      "title": "Supporting Document URL"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected"
+      ],
+      "title": "Status",
+      "default": "Pending"
+    },
+    "outlet_id": {
+      "type": "string",
+      "title": "Outlet ID (for understaffing check)"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "employee_id",
+    "type",
+    "start_date",
+    "end_date"
+  ]
+}

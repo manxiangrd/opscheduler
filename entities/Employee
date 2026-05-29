@@ -1,0 +1,64 @@
+{
+  "name": "Employee",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "role": {
+      "type": "string",
+      "title": "Role/Position"
+    },
+    "base_outlet_id": {
+      "type": "string",
+      "title": "Base Outlet ID"
+    },
+    "base_outlet_name": {
+      "type": "string",
+      "title": "Base Outlet Name"
+    },
+    "contact": {
+      "type": "string",
+      "title": "Contact"
+    },
+    "hire_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Hire Date"
+    },
+    "al_entitlement": {
+      "type": "number",
+      "title": "AL Entitlement (days)",
+      "default": 14
+    },
+    "al_taken": {
+      "type": "number",
+      "title": "AL Taken",
+      "default": 0
+    },
+    "ml_taken": {
+      "type": "number",
+      "title": "ML Taken",
+      "default": 0
+    },
+    "al_balance": {
+      "type": "number",
+      "title": "AL Balance",
+      "default": 14
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    },
+    "is_active": {
+      "type": "boolean",
+      "title": "Active",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "role"
+  ]
+}

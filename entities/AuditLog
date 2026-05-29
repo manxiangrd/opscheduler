@@ -1,0 +1,46 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "actor_email": {
+      "type": "string",
+      "title": "Actor Email"
+    },
+    "actor_name": {
+      "type": "string",
+      "title": "Actor Name"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "create",
+        "update",
+        "delete",
+        "approve",
+        "reject"
+      ],
+      "title": "Action"
+    },
+    "target_type": {
+      "type": "string",
+      "title": "Target Type (e.g. Leave, Deployment)"
+    },
+    "target_id": {
+      "type": "string",
+      "title": "Target ID"
+    },
+    "details": {
+      "type": "string",
+      "title": "Details (JSON string)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Timestamp"
+    }
+  },
+  "required": [
+    "action",
+    "target_type"
+  ]
+}

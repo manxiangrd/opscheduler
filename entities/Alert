@@ -1,0 +1,56 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Upcoming Leave",
+        "Low AL Balance",
+        "Understaffing",
+        "Leave Approved",
+        "Leave Rejected",
+        "System"
+      ],
+      "title": "Alert Type"
+    },
+    "message": {
+      "type": "string",
+      "title": "Message"
+    },
+    "recipient_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Recipient Roles"
+    },
+    "related_employee_id": {
+      "type": "string",
+      "title": "Related Employee ID"
+    },
+    "related_outlet_id": {
+      "type": "string",
+      "title": "Related Outlet ID"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Read",
+        "Dismissed"
+      ],
+      "title": "Status",
+      "default": "New"
+    },
+    "triggered_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Triggered At"
+    }
+  },
+  "required": [
+    "type",
+    "message"
+  ]
+}
